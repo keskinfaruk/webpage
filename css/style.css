@@ -1,0 +1,326 @@
+/* Faruk Keskin — personal site
+   Minimal, framework-free stylesheet. Light/dark follows the OS setting. */
+
+:root {
+	--bg: #faf9f6;
+	--bg-raised: #ffffff;
+	--text: #1c1b19;
+	--text-muted: #6b675f;
+	--border: #e6e2da;
+	--accent: #9a5b3f;
+	--accent-text: #ffffff;
+	--max: 58rem;
+	--font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+}
+
+@media (prefers-color-scheme: dark) {
+	:root {
+		--bg: #171614;
+		--bg-raised: #201f1c;
+		--text: #ece9e3;
+		--text-muted: #a29c8f;
+		--border: #34312b;
+		--accent: #e0a483;
+		--accent-text: #171614;
+	}
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+	margin: 0;
+	background: var(--bg);
+	color: var(--text);
+	font-family: var(--font);
+	font-size: 17px;
+	line-height: 1.6;
+	hyphens: auto;
+}
+
+/* language toggling — the chosen language's blocks show, the other is hidden */
+html.lang-tr [data-en] { display: none; }
+html.lang-en [data-tr] { display: none; }
+
+a {
+	color: var(--text);
+	text-decoration-color: var(--border);
+	text-underline-offset: 0.15em;
+}
+a:hover, a:focus {
+	color: var(--accent);
+	text-decoration-color: var(--accent);
+}
+
+img { max-width: 100%; }
+
+hr {
+	border: none;
+	border-top: 1px solid var(--border);
+	margin: 2.5rem 0;
+}
+
+/* ---------- layout ---------- */
+
+.wrap {
+	max-width: var(--max);
+	margin: 0 auto;
+	padding: 0 1.25rem;
+}
+
+/* Prose (plain paragraphs sitting directly in the page, and blog post bodies)
+   stays capped at a comfortable reading measure even though the page frame
+   itself is wider — only the CV's two-column sections and the projects grid
+   use the full width. */
+main.wrap > p, .profile-body p, .post-body { max-width: 42rem; }
+
+header.site {
+	border-bottom: 1px solid var(--border);
+	padding: 1.1rem 0;
+	margin-bottom: 2.5rem;
+}
+header.site .wrap {
+	display: flex;
+	align-items: baseline;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	gap: 0.5rem 1.5rem;
+}
+.site-name {
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.05rem;
+	letter-spacing: -0.01em;
+}
+.site-name:hover { color: var(--text); }
+
+nav.main ul {
+	list-style: none;
+	display: flex;
+	gap: 1.25rem;
+	margin: 0;
+	padding: 0;
+	flex-wrap: wrap;
+}
+nav.main a {
+	text-decoration: none;
+	color: var(--text-muted);
+	font-size: 0.95rem;
+}
+nav.main a:hover, nav.main a[aria-current="page"] { color: var(--text); }
+nav.main a[aria-current="page"] { border-bottom: 1px solid var(--accent); }
+
+button#lang-toggle {
+	font: inherit;
+	font-size: 0.95rem;
+	background: none;
+	border: 1px solid var(--border);
+	color: var(--text-muted);
+	border-radius: 4px;
+	padding: 0.1rem 0.5rem;
+	cursor: pointer;
+}
+button#lang-toggle:hover { color: var(--text); border-color: var(--text-muted); }
+
+main { padding-bottom: 4rem; }
+
+footer.site {
+	border-top: 1px solid var(--border);
+	padding: 1.5rem 0 3rem;
+	color: var(--text-muted);
+	font-size: 0.9rem;
+}
+
+/* ---------- typography ---------- */
+
+h1, h2, h3, h4 {
+	line-height: 1.25;
+	letter-spacing: -0.01em;
+	font-weight: 600;
+}
+h1 { font-size: 1.6rem; margin: 0 0 0.75rem; }
+h2 { font-size: 1.2rem; margin: 0 0 0.9rem; }
+h3 { font-size: 1.02rem; margin: 1.5rem 0 0.4rem; }
+
+p { margin: 0 0 1rem; }
+
+section.block {
+	margin: 2.5rem 0;
+}
+section.block > h2 {
+	text-transform: uppercase;
+	font-size: 0.8rem;
+	letter-spacing: 0.08em;
+	color: var(--text-muted);
+	font-weight: 600;
+}
+
+/* On wide viewports, give each CV section a label column instead of stacking
+   the heading above the content — uses the extra width instead of leaving it
+   empty, and echoes the old site's two-column layout. Collapses to a single
+   column below the breakpoint. */
+@media (min-width: 720px) {
+	section.block {
+		display: grid;
+		grid-template-columns: 12rem 1fr;
+		gap: 0 2rem;
+		align-items: start;
+	}
+	section.block > h2 {
+		margin: 0;
+		padding-top: 0.2rem;
+	}
+}
+
+ul.plain { list-style: none; margin: 0; padding: 0; }
+
+.text-muted { color: var(--text-muted); }
+
+/* ---------- home ---------- */
+
+/* Photo paired with name, role, bio and links as one block, instead of a
+   small row that leaves the rest of the wide page frame empty. */
+.profile {
+	display: flex;
+	gap: 2.25rem;
+	align-items: flex-start;
+	margin-bottom: 1rem;
+}
+.profile-body { flex: 1; min-width: 0; }
+.profile-body h1 { margin-bottom: 0.2rem; }
+.profile-body .role { color: var(--text-muted); font-size: 1rem; }
+
+.links-list, .contact-list {
+	margin: 0.25rem 0 0;
+	padding: 0;
+	list-style: none;
+	font-size: 0.95rem;
+}
+.links-list li, .contact-list li { display: inline; }
+.links-list li:not(:last-child)::after,
+.contact-list li:not(:last-child)::after {
+	content: "·";
+	color: var(--border);
+	margin: 0 0.5em;
+}
+
+/* ---------- CV ---------- */
+
+.cv-row {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: baseline;
+	gap: 0.15rem 1rem;
+	margin-bottom: 0.15rem;
+}
+.cv-row .what { font-weight: 500; }
+.cv-row .when { color: var(--text-muted); font-size: 0.88rem; white-space: nowrap; }
+.cv-item { margin-bottom: 1.1rem; }
+.cv-item .where { color: var(--text-muted); font-size: 0.92rem; }
+.cv-item.tight { margin-bottom: 0.7rem; }
+
+.pub-list {
+	margin: 0 0 1.5rem;
+	padding-left: 1.1rem;
+}
+.pub-list li { margin-bottom: 0.7rem; font-size: 0.95rem; }
+.pub-list h4 {
+	font-size: 0.85rem;
+	font-weight: 600;
+	color: var(--text-muted);
+	margin: 1.2rem 0 0.5rem;
+}
+
+.cv-download {
+	display: inline-block;
+	margin-top: 0.5rem;
+	font-size: 0.95rem;
+}
+
+/* ---------- card grid (used by Projects and Courses) ---------- */
+
+.card-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(15rem, 1fr));
+	gap: 1.5rem;
+}
+.card {
+	border: 1px solid var(--border);
+	border-radius: 8px;
+	padding: 1.1rem 1.25rem;
+}
+.card h3 { margin-top: 0; }
+.card .tags {
+	margin-top: 0.6rem;
+	font-size: 0.82rem;
+	color: var(--text-muted);
+}
+.card .tags span:not(:last-child)::after {
+	content: "·";
+	margin: 0 0.4em;
+}
+.card .links { margin-top: 0.6rem; font-size: 0.9rem; }
+.card .meta { margin-top: 0.3rem; font-size: 0.88rem; color: var(--text-muted); }
+.card ul.materials {
+	margin: 0.7rem 0 0;
+	padding-left: 1.1rem;
+	font-size: 0.9rem;
+}
+.card ul.materials li { margin-bottom: 0.3rem; }
+
+/* ---------- blog ---------- */
+
+.post-list { margin: 0; padding: 0; list-style: none; }
+.post-list li {
+	display: flex;
+	gap: 1rem;
+	padding: 0.55rem 0;
+	border-bottom: 1px dashed var(--border);
+}
+.post-list li:last-child { border-bottom: none; }
+.post-list time {
+	color: var(--text-muted);
+	font-size: 0.88rem;
+	white-space: nowrap;
+	width: 6.5rem;
+	flex-shrink: 0;
+	padding-top: 0.15rem;
+}
+
+.post-meta {
+	color: var(--text-muted);
+	font-size: 0.9rem;
+	margin-bottom: 2rem;
+}
+
+.post-body h2 { font-size: 1.1rem; margin-top: 2rem; }
+.post-body p { margin-bottom: 1.1rem; }
+.post-body pre {
+	background: var(--bg-raised);
+	border: 1px solid var(--border);
+	border-radius: 6px;
+	padding: 0.8rem 1rem;
+	overflow-x: auto;
+	font-size: 0.88rem;
+}
+.post-body code {
+	background: var(--bg-raised);
+	border-radius: 3px;
+	padding: 0.1em 0.35em;
+	font-size: 0.9em;
+}
+.post-body blockquote {
+	margin: 0 0 1.1rem;
+	padding-left: 1rem;
+	border-left: 3px solid var(--border);
+	color: var(--text-muted);
+}
+
+.back-link { display: inline-block; margin-bottom: 1.5rem; font-size: 0.9rem; }
+
+@media (max-width: 480px) {
+	.profile { flex-direction: column; align-items: flex-start; }
+	.cv-row { grid-template-columns: 1fr; }
+	.cv-row .when { justify-self: start; }
+}
