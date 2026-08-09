@@ -36,7 +36,7 @@ body {
 	font-family: var(--font);
 	font-size: 17px;
 	line-height: 1.6;
-	hyphens: auto;
+	hyphens: none;
 }
 
 /* language toggling — the chosen language's blocks show, the other is hidden */
