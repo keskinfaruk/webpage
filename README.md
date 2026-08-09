@@ -13,7 +13,11 @@ via a language toggle that shows/hides `data-en`/`data-tr` elements with CSS.
 ```
 index.html       Home
 cv.html          Full CV
+projects.html    Selected projects
 courses.html     Courses taught
+blog/            Blog — post index + individual posts
+feed.xml         Atom feed for the blog
+veridem/         Feed of instant Türkiye demographic data-change notices
 css/style.css    Stylesheet
 js/main.js       Language toggle + obfuscated email link
 img/             Favicon
