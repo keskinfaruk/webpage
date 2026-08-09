@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>veridem — instant change notices (Türkiye)</title>
+  <id>https://faruk.page/veridem/changes.xml</id>
+  <link rel="self" href="https://faruk.page/veridem/changes.xml" />
+  <link href="https://faruk.page/veridem/" />
+  <updated>2026-08-10T00:00:00Z</updated>
+  <author>
+    <name>veridem</name>
+  </author>
+  <subtitle>Fact-only notices the moment a Türkiye indicator changes — no interpretation. See the veridem blog for narrative and context.</subtitle>
+</feed>

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en" class="lang-en">
+<head>
+<meta charset="utf-8">
+<script>try{document.documentElement.className=localStorage.getItem("lang")==="tr"?"lang-tr":"lang-en";}catch(e){}</script>
+<title>Feed — Faruk Keskin</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Instant, fact-only notices whenever a Türkiye demographic indicator changes, from the veridem pipeline.">
+<link rel="shortcut icon" href="../img/favicon.ico">
+<link rel="stylesheet" href="../css/style.css">
+<link rel="alternate" type="application/atom+xml" title="veridem — instant change notices (Türkiye)" href="./changes.xml">
+</head>
+<body>
+<header class="site">
+	<div class="wrap">
+		<a class="site-name" href="../index.html">Faruk Keskin</a>
+		<nav class="main">
+			<ul>
+				<li><a href="../index.html"><span data-en>Home</span><span data-tr>Anasayfa</span></a></li>
+				<li><a href="../cv.html">CV</a></li>
+				<li><a href="../projects.html"><span data-en>Projects</span><span data-tr>Projeler</span></a></li>
+				<li><a href="../courses.html"><span data-en>Courses</span><span data-tr>Dersler</span></a></li>
+				<li><a href="../blog/index.html">Blog</a></li>
+				<li><a href="./index.html" aria-current="page"><span data-en>Feed</span><span data-tr>Akış</span></a></li>
+				<li><button id="lang-toggle" type="button" aria-label="Switch language">TR</button></li>
+			</ul>
+		</nav>
+	</div>
+</header>
+
+<main class="wrap">
+	<h1 data-en>Feed</h1>
+	<h1 data-tr>Akış</h1>
+	<p data-en class="text-muted">Veridem's English <a href="./changes.xml">RSS/Atom feed</a> for updates on Türkiye's demographic data. Raw numbers and comparisons.</p>
+	<p data-tr class="text-muted">Veridem'in Türkiye demografik verileri hakkında güncellemeleri için İngilizce <a href="./changes.xml">RSS/Atom akışı</a>. Sadece ham rakamlar ve karşılaştırmalar.</p>
+
+	<ul class="post-list" id="updates-list">
+		<!-- Add new updates above this line, newest first. Synced automatically from veridem's daily run -- see changes.xml for the machine-readable version. -->
+	</ul>
+	<p class="text-muted" id="empty-note">No updates yet — check back after the next data release.</p>
+</main>
+
+<footer class="site">
+	<div class="wrap">
+		<span data-en>&copy; 2026 Faruk Keskin.</span>
+		<span data-tr>&copy; 2026 Faruk Keskin.</span>
+	</div>
+</footer>
+
+<script src="../js/main.js"></script>
+</body>
+</html>
