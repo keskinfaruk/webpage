@@ -13,7 +13,8 @@
     <title>Current on record -- Adolescent Fertility Rate (Türkiye, TurkStat press release) 2025: 9.2, down from 10.2 in 2024 (-10.0%)</title>
     <id>tag:faruk.page,2026-08-10:veridem/changes/ADOLESCENT_FERTILITY_RATE-TR-2025-BASELINE-tuik_press_20260810T012405Z</id>
     <updated>2026-08-10T21:02:16Z</updated>
-    <summary type="text">Current on record: Adolescent Fertility Rate, Türkiye, TurkStat press release, 2025
+    <summary type="text">Current on record -- Adolescent Fertility Rate (Türkiye, TurkStat press release) 2025: 9.2, down from 10.2 in 2024 (-10.0%). Down -- 18th consecutive annual decline. Lowest value in the series (since 2001).</summary>
+    <content type="text">Current on record: Adolescent Fertility Rate, Türkiye, TurkStat press release, 2025
 
   Population       Total
   Value            9.2 (2025)
@@ -35,6 +36,6 @@
     2022  12.5
     2023  11.2
     2024  10.2
-    2025   9.2   &lt;- current</summary>
+    2025   9.2   &lt;- current</content>
   </entry>
 </feed>
