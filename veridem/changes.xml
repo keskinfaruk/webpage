@@ -4,9 +4,37 @@
   <id>https://faruk.page/veridem/changes.xml</id>
   <link rel="self" href="https://faruk.page/veridem/changes.xml" />
   <link href="https://faruk.page/veridem/" />
-  <updated>2026-08-10T00:00:00Z</updated>
+  <updated>2026-08-10T21:02:16Z</updated>
   <author>
     <name>veridem</name>
   </author>
   <subtitle>Fact-only notices the moment a Türkiye indicator changes — no interpretation. See the veridem blog for narrative and context.</subtitle>
+  <entry>
+    <title>Current on record -- Adolescent Fertility Rate (Türkiye, TurkStat press release) 2025: 9.2, down from 10.2 in 2024 (-10.0%)</title>
+    <id>tag:faruk.page,2026-08-10:veridem/changes/ADOLESCENT_FERTILITY_RATE-TR-2025-BASELINE-tuik_press_20260810T012405Z</id>
+    <updated>2026-08-10T21:02:16Z</updated>
+    <summary type="text">Current on record: Adolescent Fertility Rate, Türkiye, TurkStat press release, 2025
+
+  Population       Total
+  Value            9.2 (2025)
+  Previous         10.2 (2024)
+  Change           -1.0 (-10.0%)
+
+  Note             Not a new release -- this is the value already on
+                   record in veridem's data bank, posted as part of a
+                   one-time backfill so this feed has content to show
+                   before the next real change occurs.
+
+  Trend context
+    Direction      Down -- 18th consecutive annual decline
+    Record         Lowest value in the series (since 2001)
+    5-yr average   11.2
+
+  Recent series
+    2021  13.1
+    2022  12.5
+    2023  11.2
+    2024  10.2
+    2025   9.2   &lt;- current</summary>
+  </entry>
 </feed>
