@@ -4,11 +4,39 @@
   <id>https://faruk.page/veridem/changes.xml</id>
   <link rel="self" href="https://faruk.page/veridem/changes.xml" />
   <link href="https://faruk.page/veridem/" />
-  <updated>2026-08-10T21:02:16Z</updated>
+  <updated>2026-08-11T22:40:15Z</updated>
   <author>
     <name>veridem</name>
   </author>
   <subtitle>Fact-only notices the moment a Türkiye indicator changes — no interpretation. See the veridem blog for narrative and context.</subtitle>
+  <entry>
+    <title>Current on record -- Crude Death Rate (CDR) (Türkiye, Eurostat) 2025: 5.7, unchanged from 5.7 in 2024 (+0.0%)</title>
+    <id>tag:faruk.page,2026-08-11:veridem/changes/CDR-TR-2025-BASELINE-eurostat_20260809T091130Z</id>
+    <updated>2026-08-11T22:40:15Z</updated>
+    <summary type="text">Current on record -- Crude Death Rate (CDR) (Türkiye, Eurostat) 2025: 5.7, unchanged from 5.7 in 2024 (+0.0%). Flat vs previous period.</summary>
+    <content type="text">Current on record: Crude Death Rate (CDR), Türkiye, Eurostat, 2025
+
+  Population       Total
+  Value            5.7 (2025)
+  Previous         5.7 (2024)
+  Change           +0.0 (+0.0%)
+
+  Note             Not a new release -- this is the value already on
+                   record in veridem's data bank, posted as part of a
+                   one-time backfill so this feed has content to show
+                   before the next real change occurs.
+
+  Trend context
+    Direction      Flat vs previous period
+    5-yr average   6.0
+
+  Recent series
+    2021  6.7
+    2022  5.9
+    2023  6.2
+    2024  5.7
+    2025  5.7   &lt;- current</content>
+  </entry>
   <entry>
     <title>Current on record -- Adolescent Fertility Rate (Türkiye, TurkStat press release) 2025: 9.2, down from 10.2 in 2024 (-10.0%)</title>
     <id>tag:faruk.page,2026-08-10:veridem/changes/ADOLESCENT_FERTILITY_RATE-TR-2025-BASELINE-tuik_press_20260810T012405Z</id>
