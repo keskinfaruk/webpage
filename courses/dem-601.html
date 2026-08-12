@@ -21,6 +21,10 @@ table.sched td:first-child, table.sched th:first-child { width: 3rem; }
 table.sched td:nth-child(2), table.sched th:nth-child(2) { width: 7rem; white-space: nowrap; color: var(--text-muted); }
 table.sched .holiday td { background: var(--bg-raised); font-style: italic; color: var(--text-muted); }
 table.sched .lecture-name { display: block; font-weight: 600; margin-bottom: 0.2rem; color: var(--text); }
+.table-scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+.table-scroll table.sched { margin-bottom: 0; }
+table.sched.readings { font-size: 0.82rem; }
+table.sched.readings td:nth-child(2), table.sched.readings th:nth-child(2) { width: auto; white-space: normal; color: inherit; }
 @media print {
 	.back-link { display: none; }
 	.wrap { max-width: none; }
@@ -55,16 +59,35 @@ table.sched .lecture-name { display: block; font-weight: 600; margin-bottom: 0.2
 	<table class="meta-table">
 		<tr><td>Instructor</td><td>Faruk Keskin (farukkeskin@hacettepe.edu.tr)</td></tr>
 		<tr><td>Lectures</td><td>Thursday 09:40–12:30</td></tr>
-		<tr><td>Office hour</td><td>Thursday 14:00–15:00</td></tr>
+		<tr><td>Office hour</td><td>Thursday 14:00–15:00 (drop-in, no appointment needed)</td></tr>
+		<tr><td>Office</td><td>Room 319, 3rd floor</td></tr>
 		<tr><td>Credits</td><td>3 (local) / 8 ECTS</td></tr>
 	</table>
 
 	<h2>Course description</h2>
-	<p>Classically, there are two main branches of the scientific discipline of demography: technical (formal) demography/demographic analysis and social demography/population studies. Technical demography focuses on collecting demographic data and analyzing it with demographic techniques (creating, examining, and projecting demographic indicators), while population studies looks at demographic processes in relation to social, economic, political, cultural, and biological factors.</p>
-	<p>DEM 601 is an introductory master's-level course in the Department of Demography, giving students a comprehensive grounding in technical demography. No prior background in demography is assumed. Students are introduced to demographic terminology and the main types of demographic data, then learn to calculate core demographic indicators, including life table indicators, and interpret them by comparison. Any calculation tool (spreadsheet software, R, or similar) is fine for coursework and assignments. By the end of the course, students will have a solid foundation in demographic measurement and basic models, able to analyze and interpret demographic data on their own.</p>
+	<p>Demography is generally divided into two branches: technical demography (also called formal demography, or demographic analysis) and population studies (also called social demography). Technical demography collects and analyzes demographic data to construct, examine, and project population indicators. Population studies examines demographic processes in relation to social, economic, political, cultural, and biological factors. DEM 601 focuses on the first of these two branches.</p>
+	<p>DEM 601 is an introductory master's-level course in the Department of Demography, giving students a comprehensive grounding in technical demography. No prior background in demography is assumed. Students are introduced to demographic terminology and the main types of demographic data, then learn to calculate and interpret core demographic indicators, covering population change and composition, mortality, life tables, fertility, nuptiality, migration, and standardization techniques for comparing populations. Any calculation tool (spreadsheet software, R, or similar) is fine for coursework and assignments. Across the semester, students apply these methods to a population of their own choosing through an individual term project, <em>The Population Blueprint</em>, building up a cumulative demographic profile chapter by chapter. By the end of the course, students will have a solid foundation in demographic measurement and basic models, able to analyze and interpret demographic data on their own.</p>
+
+	<h2>Contact</h2>
+	<ul>
+		<li>Email: farukkeskin@hacettepe.edu.tr</li>
+		<li>Office hours: Thursday 14:00–15:00 (drop-in, no appointment needed)</li>
+		<li>Office: Room 319, 3rd floor</li>
+	</ul>
+
+	<h2>Learning objectives</h2>
+	<p>By the end of DEM 601, students will be able to:</p>
+	<ul>
+		<li>Define core demographic concepts and correctly distinguish rates, ratios, proportions, probabilities, and percentages</li>
+		<li>Identify and evaluate major sources of demographic data and their limitations</li>
+		<li>Calculate and interpret standard indicators of population growth, composition, mortality, fertility, nuptiality, and migration</li>
+		<li>Construct and analyze both complete and abridged life tables</li>
+		<li>Apply standardization techniques to make valid comparisons across populations</li>
+		<li>Independently analyze a real demographic dataset and present findings</li>
+	</ul>
 
 	<h2>Attendance and grading</h2>
-	<p>Attendance at every lecture and recitation is mandatory. Students are asked to submit their assignments before the recitation.</p>
+	<p>Attendance at every lecture and recitation is mandatory. Students must attend at least 80% of scheduled sessions to remain eligible to sit the final exam; documented medical or family emergencies are excluded from this calculation, provided the instructor is notified as soon as possible and supporting documentation is provided.</p>
 	<table class="sched">
 		<tr><th>Component</th><th>Weight</th></tr>
 		<tr><td>Final exam</td><td>50%</td></tr>
@@ -72,6 +95,11 @@ table.sched .lecture-name { display: block; font-weight: 600; margin-bottom: 0.2
 		<tr><td>Assignments</td><td>10% (1% each)</td></tr>
 		<tr><td>Project</td><td>20% (5% presentation)</td></tr>
 	</table>
+
+	<h2>Project: The Population Blueprint</h2>
+	<p>As part of the course, students complete an individual term project called <em>The Population Blueprint</em> (TPB). TPB consists of a sequence of chapters, each building on the one before; several of the semester's assignments double as project chapters, so chapters must be completed in the order the course progresses, since each one is a prerequisite for the next.</p>
+	<p>Each student selects a population of their own choosing (at the continent, country, or city level) and applies the concepts introduced week by week to that population. Türkiye may not be chosen, since it is the population used for all in-class and assignment examples throughout the semester. Choose carefully: the same population is used for every chapter of the project. Students must confirm their chosen population with the instructor by the end of Week 2.</p>
+	<p>TPB is worth 20% of the final grade in total: 15% for the completed project chapters and 5% for the final presentation in Week 13 (see Attendance and grading).</p>
 
 	<h2>Sources</h2>
 	<ul>
@@ -83,7 +111,7 @@ table.sched .lecture-name { display: block; font-weight: 600; margin-bottom: 0.2
 	</ul>
 
 	<h2>Weekly schedule</h2>
-	<p>Lectures meet Thursdays, 09:40–12:30.</p>
+	<p>Lectures meet Thursdays, 09:40–12:30. See Class format under Policies for the weekly session structure.</p>
 	<table class="sched">
 		<tr><th>Week</th><th>Date</th><th>Topic</th></tr>
 		<tr><td>1</td><td>24-09-2026</td><td><span class="lecture-name">Introduction to the Course and Basic Demographic Concepts</span>Syllabus, course requirements and grading; demographic concepts and terminology; demographic data sources</td></tr>
@@ -96,16 +124,46 @@ table.sched .lecture-name { display: block; font-weight: 600; margin-bottom: 0.2
 		<tr><td>7</td><td>12-11-2026</td><td><span class="lecture-name">Midterm Exam</span></td></tr>
 		<tr><td>8</td><td>19-11-2026</td><td><span class="lecture-name">Life Table I</span>Simple and abridged life tables, cohort and period life tables; definition of life table functions</td></tr>
 		<tr><td>9</td><td>26-11-2026</td><td><span class="lecture-name">Life Table II</span>Construct and analyze simple and abridged life tables; model life tables</td></tr>
-		<tr><td>10</td><td>03-12-2026</td><td><span class="lecture-name">Measures of Fertility I</span>Basic concepts: fertility, fecundity, and infecundity; crude birth rate, child/woman ratio, general fertility rate, age-specific birth rates; total fertility rate, gross reproduction rate; net reproduction rate</td></tr>
-		<tr><td>11</td><td>10-12-2026</td><td><span class="lecture-name">Measures of Fertility II</span>Mean of the age-specific fertility distribution, mean length of generation; period fertility, cohort fertility, tempo and quantum of fertility</td></tr>
+		<tr><td>10</td><td>03-12-2026</td><td><span class="lecture-name">Measures of Fertility I</span>Basic concepts: fertility, fecundity, and infecundity; crude birth rate, child/woman ratio, general fertility rate, age-specific birth rates; total fertility rate, replacement level, proximate determinants of fertility</td></tr>
+		<tr><td>11</td><td>10-12-2026</td><td><span class="lecture-name">Measures of Fertility II</span>Period vs. cohort fertility, tempo and quantum effects; gross reproduction rate, net reproduction rate; mean age at childbearing and mean length of generation</td></tr>
 		<tr><td>12</td><td>17-12-2026</td><td><span class="lecture-name">Measures of Nuptiality and Migration</span>Mean and median age of marriage; crude, age-specific, and general rates of marriage and divorce; Singulate Mean Age of Marriage (SMAM); basic concepts and measures: in- and out-migration, net migration, lifetime migration</td></tr>
-		<tr><td>13</td><td>24-12-2026</td><td><span class="lecture-name">Student Presentations</span></td></tr>
+		<tr><td>13</td><td>24-12-2026</td><td><span class="lecture-name">Population Projections &amp; Student Presentations</span>Population projection methods; student project presentations</td></tr>
 	</table>
 	<p class="text-muted">Final exams: 04-01-2027 to 15-01-2027.</p>
 
+	<h2>Readings by week</h2>
+	<p>Rowland is the core text for the course, except in Week 5, where Hinde is the core reading. All other sources are supplementary. Chapter titles are listed as they appear in each source's table of contents; consult the full citation under Sources for edition details.</p>
+	<div class="table-scroll">
+	<table class="sched readings">
+		<tr><th>Week</th><th>Topic</th><th>Rowland</th><th>Hinde</th><th>Newell</th><th>Wachter</th><th>Carmichael</th></tr>
+		<tr><td>1</td><td>Intro, basic concepts, data sources</td><td>Introduction</td><td>Some Demographic Fundamentals</td><td>Introduction; Data Collection</td><td>Introduction: Why Study Demography?</td><td>Basic Sources, Concepts, Definitions and Types of Measures</td></tr>
+		<tr><td>2</td><td>Indicators, person-years-lived</td><td>Population Change</td><td>Some Demographic Fundamentals</td><td></td><td>Periods and Cohorts</td><td>Basic Sources, Concepts, Definitions and Types of Measures</td></tr>
+		<tr><td>3</td><td>Population change, growth, momentum</td><td>Population Change; Population Growth and Decline</td><td>Population Growth</td><td></td><td>Exponential Growth</td><td>Basic Sources, Concepts, Definitions and Types of Measures</td></tr>
+		<tr><td>4</td><td>Age and sex composition</td><td>Age-Sex Composition</td><td>Models of Population Structure</td><td>Age and Sex Structure</td><td>Stable Age Structures</td><td>Basic Sources, Concepts, Definitions and Types of Measures</td></tr>
+		<tr><td>5</td><td>Measures of mortality</td><td>Mortality and Health</td><td>The Measurement of Mortality</td><td>Mortality and Life Tables</td><td>Periods and Cohorts</td><td>Analysis of Mortality: The Life Table and Survival</td></tr>
+		<tr><td>6</td><td>Standardization; early-life mortality</td><td>Comparing Populations</td><td>Comparing Mortality Experiences</td><td>Mortality and Life Tables</td><td>Periods and Cohorts; Period Fertility</td><td>Comparison: Standardization and Decomposition</td></tr>
+		<tr><td>7</td><td>Midterm Exam</td><td></td><td></td><td></td><td></td><td></td></tr>
+		<tr><td>8</td><td>Life Table I</td><td>Life Tables</td><td>The Life Table</td><td>Mortality and Life Tables</td><td>Cohort Mortality; Period Mortality</td><td>Analysis of Mortality: The Life Table and Survival</td></tr>
+		<tr><td>9</td><td>Life Table II</td><td>Life Tables; Stable and Stationary Models</td><td>Multiple-Decrement Life Tables; Applications of Stable Population Theory</td><td>Empirical Model Life Tables; Relational Model Life Tables</td><td>Period Mortality</td><td>Analysis of Mortality: The Life Table and Survival</td></tr>
+		<tr><td>10</td><td>Measures of Fertility I</td><td>Fertility and the Family</td><td>The Measurement of Fertility</td><td>Period Fertility</td><td>Cohort Fertility; Period Fertility</td><td>Analysis of Fertility</td></tr>
+		<tr><td>11</td><td>Measures of Fertility II</td><td>Fertility and the Family</td><td>Parity Progression; The Determinants of Fertility</td><td>Cohort Fertility</td><td>Period Fertility</td><td>Analysis of Fertility</td></tr>
+		<tr><td>12</td><td>Nuptiality and Migration</td><td>Migration</td><td>The Analysis of Marriage; The Analysis of Migration</td><td>Marriage and Divorce; Migration</td><td>Marriage and Family; Migration and Location</td><td>Marriage, Marital Status and Relationships; Population Distribution, Urbanization and Migration</td></tr>
+		<tr><td>13</td><td>Population Projections &amp; Presentations</td><td>Population Projections and Estimates</td><td>Introducing Population Projection; The Component Method of Population Projection</td><td>Population Projections and Forecasts</td><td>Population Projection</td><td>Population Projections</td></tr>
+	</table>
+	</div>
+	<p><em>Note: In Week 6, Wachter's discussion of age-standardization appears in the fertility chapter of that text rather than in a mortality chapter.</em></p>
+
 	<h2>Policies</h2>
+	<h3>Class format</h3>
+	<p>Each three-hour session, except Weeks 1 and 7, opens with a one-hour review of the previous week's assignment, followed by two hours of new lecture material.</p>
+	<h3>Assignments</h3>
+	<p>Ten assignments are given across the semester, each covering that week's lecture content; see the Weekly schedule for the current list of assignment weeks. Each assignment is due before the start of the following week's recitation and is worth 1% of the final grade; solutions are reviewed in the first hour of that session. Any calculation tool (spreadsheet software, R, or similar) may be used. Some assignments also serve as chapters of the term project (see Project: The Population Blueprint).</p>
+	<h3>Exams</h3>
+	<p>The midterm (Week 7) and final exam are closed book: no notes or formula sheets are permitted. A calculator is allowed; no other electronic devices (phones, laptops, smartwatches, etc.) may be used. An ungraded review exercise is distributed ahead of the midterm to support exam preparation; it is not one of the 10 graded assignments. A make-up exam is offered only in cases of documented medical or family emergency, arranged with the instructor in advance wherever possible.</p>
+	<h3>Use of AI tools</h3>
+	<p>Students may use AI tools (e.g., ChatGPT, Claude) to clarify concepts or help debug code while working on assignments and the project. Final calculations, interpretations, and written answers must be the student's own; submitting AI-generated answers, interpretations, or code as final work is a violation of the Academic integrity policy below.</p>
 	<h3>Late work</h3>
-	<p>Assignments are due before the start of the recitation session in which they are discussed. Late submissions lose 10% of the assignment's point value per day late, up to three days; work submitted more than three days late will not be accepted for credit, except in cases of documented medical or family emergency, arranged with the instructor in advance wherever possible.</p>
+	<p>Late submissions receive no credit, except in cases of documented medical or family emergency, arranged with the instructor in advance wherever possible. See Assignments for submission deadlines.</p>
 	<h3>Academic integrity</h3>
 	<p>Students are expected to complete assignments, exams, and the course project independently unless group work is explicitly assigned. Submitting work copied from another student or from any uncredited source, or misrepresenting data or results, constitutes academic dishonesty and will be handled under Hacettepe University's academic integrity regulations, up to and including a failing grade for the assignment or the course.</p>
 </main>
