@@ -123,7 +123,7 @@ button#lang-toggle {
 }
 button#lang-toggle:hover { color: var(--text); border-color: var(--text-muted); }
 
-main { padding-bottom: 4rem; }
+main.wrap { padding-bottom: 4rem; }
 
 footer.site {
 	border-top: 1px solid var(--border);
