@@ -1,4 +1,4 @@
-/* Faruk Keskin — personal site
+/* Faruk Keskin: personal site
    Minimal, framework-free stylesheet. Light/dark follows the OS setting. */
 
 :root {
@@ -39,7 +39,7 @@ body {
 	hyphens: none;
 }
 
-/* language toggling — the chosen language's blocks show, the other is hidden */
+/* language toggling: the chosen language's blocks show, the other is hidden */
 html.lang-tr [data-en] { display: none; }
 html.lang-en [data-tr] { display: none; }
 
@@ -71,7 +71,7 @@ hr {
 
 /* Prose (plain paragraphs sitting directly in the page, and blog post bodies)
    stays capped at a comfortable reading measure even though the page frame
-   itself is wider — only the CV's two-column sections and the projects grid
+   itself is wider. Only the CV's two-column sections and the projects grid
    use the full width. */
 main.wrap > p, .profile-body p, .post-body { max-width: 42rem; }
 
@@ -157,7 +157,7 @@ section.block > h2 {
 }
 
 /* On wide viewports, give each CV section a label column instead of stacking
-   the heading above the content — uses the extra width instead of leaving it
+   the heading above the content. It uses the extra width instead of leaving it
    empty, and echoes the old site's two-column layout. Collapses to a single
    column below the breakpoint. */
 @media (min-width: 720px) {
@@ -324,4 +324,54 @@ ul.plain { list-style: none; margin: 0; padding: 0; }
 	.profile { flex-direction: column; align-items: flex-start; }
 	.cv-row { grid-template-columns: 1fr; }
 	.cv-row .when { justify-self: start; }
+}
+
+/* ---------- course pages (hub + syllabus) ---------- */
+
+/* Schedule and readings tables need more room than the reading measure the
+   rest of the site is set to, so course pages opt into a wider frame. */
+.wrap.wide { max-width: 68rem; }
+main.wrap.wide > p { max-width: none; }
+
+/* Course identity block: instructor, times, room. Label column, value column. */
+.meta-table { width: 100%; border-collapse: collapse; margin: 0 0 1.5rem; font-size: 0.92rem; }
+.meta-table td { padding: 0.25rem 0; vertical-align: top; border: none; }
+.meta-table td:first-child { color: var(--text-muted); width: 9rem; white-space: nowrap; }
+
+/* Row of shortcuts under the meta block on the hub. */
+.quick-links { margin: 0 0 2rem; padding: 0; list-style: none; font-size: 0.95rem; }
+.quick-links li { display: inline; }
+.quick-links li:not(:last-child)::after { content: "·"; color: var(--border); margin: 0 0.5em; }
+
+table.sched { width: 100%; border-collapse: collapse; margin: 0 0 1.25rem; font-size: 0.9rem; }
+table.sched th, table.sched td { border: 1px solid var(--border); padding: 0.5rem 0.7rem; text-align: left; vertical-align: top; }
+table.sched th { background: var(--bg-raised); font-weight: 600; }
+table.sched td:first-child, table.sched th:first-child { width: 3rem; }
+table.sched td:nth-child(2), table.sched th:nth-child(2) { width: 7rem; white-space: nowrap; color: var(--text-muted); }
+table.sched .holiday td { background: var(--bg-raised); font-style: italic; color: var(--text-muted); }
+table.sched .lecture-name { display: block; font-weight: 600; margin-bottom: 0.2rem; color: var(--text); }
+
+/* The readings table has six source columns and no date column, so it drops
+   the fixed second-column width and scrolls sideways on a narrow screen. */
+.table-scroll { overflow-x: auto; margin: 0 0 1.25rem; }
+.table-scroll table.sched { margin-bottom: 0; }
+table.sched.readings { font-size: 0.82rem; }
+table.sched.readings td:nth-child(2), table.sched.readings th:nth-child(2) { width: auto; white-space: normal; color: inherit; }
+
+/* Materials column on the hub: one link per item, dot-separated. A lecture with
+   nothing published yet has an empty cell. */
+table.sched.hub td:last-child, table.sched.hub th:last-child { width: 15rem; }
+.mat { margin: 0; padding: 0; list-style: none; font-size: 0.88rem; }
+.mat li { display: inline; }
+.mat li:not(:last-child)::after { content: "·"; color: var(--border); margin: 0 0.4em; }
+
+/* File links carry their type and size so a student knows what they are
+   clicking before they click it. */
+.filesize { color: var(--text-muted); font-size: 0.85em; white-space: nowrap; }
+
+@media print {
+	.back-link, nav.main, .quick-links { display: none; }
+	.wrap, .wrap.wide { max-width: none; }
+	table.sched, tr { break-inside: avoid; }
+	h2 { break-after: avoid; }
 }
