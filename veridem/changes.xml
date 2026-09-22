@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>veridem — instant change notices (Türkiye)</title>
+  <title>veridem: instant change notices (Türkiye)</title>
   <id>https://faruk.page/veridem/changes.xml</id>
   <link rel="self" href="https://faruk.page/veridem/changes.xml" />
   <link href="https://faruk.page/veridem/" />
@@ -8,7 +8,7 @@
   <author>
     <name>veridem</name>
   </author>
-  <subtitle>Fact-only notices the moment a Türkiye indicator changes — no interpretation. See the veridem blog for narrative and context.</subtitle>
+  <subtitle>Fact-only notices the moment a Türkiye indicator changes, with no interpretation. See the veridem blog for narrative and context.</subtitle>
   <entry>
     <title>Current on record -- Crude Death Rate (CDR) (Türkiye, Eurostat) 2025: 5.7, unchanged from 5.7 in 2024 (+0.0%)</title>
     <id>tag:faruk.page,2026-08-11:veridem/changes/CDR-TR-2025-BASELINE-eurostat_20260809T091130Z</id>
