@@ -1,4 +1,4 @@
-// Faruk Keskin — personal site
+// Faruk Keskin: personal site
 // Vanilla JS only: language toggle + obfuscated email. No dependencies.
 
 (function () {
