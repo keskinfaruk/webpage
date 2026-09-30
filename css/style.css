@@ -369,9 +369,59 @@ table.sched.hub td:last-child, table.sched.hub th:last-child { width: 15rem; }
    clicking before they click it. */
 .filesize { color: var(--text-muted); font-size: 0.85em; white-space: nowrap; }
 
+/* Screen-hidden blocks that only the printed CV shows (contact header, date). */
+.print-only { display: none; }
+
 @media print {
 	.back-link, nav.main, .quick-links { display: none; }
 	.wrap, .wrap.wide { max-width: none; }
 	table.sched, tr { break-inside: avoid; }
 	h2 { break-after: avoid; }
+
+	/* Always print light, whatever the OS colour scheme. */
+	:root {
+		--bg: #ffffff;
+		--text: #1c1b19;
+		--text-muted: #5a564f;
+		--border: #cfcac0;
+		--accent: #9a5b3f;
+	}
+
+	/* ---------- printed CV (cv.html, see scripts/build-cv.sh) ---------- */
+
+	@page {
+		size: A4;
+		margin: 16mm 17mm 18mm;
+		@bottom-center { content: counter(page) " / " counter(pages); font-family: -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; font-size: 8pt; color: #5a564f; }
+	}
+
+	body { font-size: 10pt; line-height: 1.4; background: #fff; }
+	header.site, footer.site, .cv-download, main.wrap > h1 { display: none; }
+	main.wrap { padding: 0; }
+	.print-only { display: block; }
+	a { text-decoration: none; }
+
+	.cv-print-head { text-align: center; margin-bottom: 1.4rem; }
+	.cv-print-head .name { font-size: 20pt; font-weight: 600; letter-spacing: -0.01em; }
+	.cv-print-head .role { color: var(--text-muted); margin: 0.1rem 0 0.2rem; }
+	.cv-print-head .contact-list { font-size: 9pt; }
+
+	/* Section heading above its content with a rule, as in a typeset CV,
+	   instead of the screen's label column. */
+	section.block { display: block; margin: 0 0 1.1rem; }
+	section.block > h2 {
+		font-size: 9pt;
+		color: var(--text);
+		border-bottom: 1px solid var(--border);
+		padding-bottom: 0.15rem;
+		margin: 0 0 0.5rem;
+	}
+	h4 { font-size: 9.5pt; margin: 0.7rem 0 0.35rem; break-after: avoid; }
+	.cv-item { margin-bottom: 0.45rem; break-inside: avoid; }
+	.cv-item.tight { margin-bottom: 0.4rem; }
+	.cv-row .when { font-size: 9pt; }
+	.cv-item .where { font-size: 9pt; }
+	.pub-list { margin-bottom: 0.6rem; }
+	.pub-list li { font-size: 9.5pt; margin-bottom: 0.35rem; break-inside: avoid; }
+	.cv-updated { margin-top: 1.2rem; font-size: 8.5pt; color: var(--text-muted); }
 }

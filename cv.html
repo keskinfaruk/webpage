@@ -2,7 +2,7 @@
 <html lang="en" class="lang-en">
 <head>
 <meta charset="utf-8">
-<script>try{document.documentElement.className=localStorage.getItem("lang")==="tr"?"lang-tr":"lang-en";}catch(e){}</script>
+<script>try{var q=/[?&]lang=(en|tr)\b/.exec(location.search);document.documentElement.className=(q?q[1]:localStorage.getItem("lang"))==="tr"?"lang-tr":"lang-en";}catch(e){}</script>
 <title>CV · Faruk Keskin</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="description" content="Faruk Keskin's CV: education, publications, teaching and research experience.">
@@ -27,6 +27,19 @@
 </header>
 
 <main class="wrap">
+	<!-- Printed CV header: hidden on screen, keep in sync with the contact block on index.html -->
+	<div class="print-only cv-print-head">
+		<div class="name">Faruk Keskin</div>
+		<div class="role" data-en>Research Assistant, Hacettepe University Institute of Population Studies</div>
+		<div class="role" data-tr>Araştırma Görevlisi, Hacettepe Üniversitesi Nüfus Etütleri Enstitüsü</div>
+		<ul class="contact-list">
+			<li>+90 312 297 73 67 / 142</li>
+			<li><a class="email-full" href="#">farukkeskin [at] hacettepe [dot] edu [dot] tr</a></li>
+			<li><a href="https://faruk.page">faruk.page</a></li>
+			<li>ORCID <a href="https://orcid.org/0000-0002-7034-6643">0000-0002-7034-6643</a></li>
+		</ul>
+	</div>
+
 	<h1 data-en>Curriculum Vitae</h1>
 	<h1 data-tr>Özgeçmiş</h1>
 	<p class="cv-download">
@@ -390,6 +403,11 @@
 			<div class="cv-item"><div class="cv-row"><span class="what"><b>Saha Ekip Lideri</b>, Türkiye'de Kadına Yönelik Aile İçi Şiddet Araştırması 2014</span><span class="when">2013–2015</span></div></div>
 		</div>
 	</section>
+
+	<p class="print-only cv-updated">
+		<span data-en>Last updated: <span class="cv-date" data-locale="en-GB"></span></span>
+		<span data-tr>Son güncelleme: <span class="cv-date" data-locale="tr-TR"></span></span>
+	</p>
 </main>
 
 <footer class="site">

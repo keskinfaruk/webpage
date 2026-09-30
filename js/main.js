@@ -1,5 +1,5 @@
 // Faruk Keskin: personal site
-// Vanilla JS only: language toggle + obfuscated email. No dependencies.
+// Vanilla JS only: language toggle + obfuscated email + printed CV date. No dependencies.
 
 (function () {
 	"use strict";
@@ -32,11 +32,27 @@
 
 		// assemble the mailto: link at runtime so the visible address stays
 		// obfuscated against simple scrapers while still being clickable
+		var user = "farukkeskin";
+		var domain = "hacettepe.edu.tr";
 		var emailLink = document.getElementById("email-link");
 		if (emailLink) {
-			var user = "farukkeskin";
-			var domain = "hacettepe.edu.tr";
 			emailLink.setAttribute("href", "mailto:" + user + "@" + domain);
+		}
+
+		// the printed CV shows the address in full, since a PDF needs it readable
+		var fullEmails = document.querySelectorAll(".email-full");
+		for (var i = 0; i < fullEmails.length; i++) {
+			fullEmails[i].setAttribute("href", "mailto:" + user + "@" + domain);
+			fullEmails[i].textContent = user + "@" + domain;
+		}
+
+		// "Last updated" on the printed CV: the page's modification date
+		// (file time when built locally, Last-Modified when served)
+		var dates = document.querySelectorAll(".cv-date");
+		var modified = new Date(document.lastModified);
+		for (var j = 0; j < dates.length; j++) {
+			dates[j].textContent = modified.toLocaleDateString(dates[j].getAttribute("data-locale"),
+				{ day: "numeric", month: "long", year: "numeric" });
 		}
 	});
 })();
