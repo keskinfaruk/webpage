@@ -359,10 +359,15 @@ table.sched.readings { font-size: 0.82rem; }
 table.sched.readings td:nth-child(2), table.sched.readings th:nth-child(2) { width: auto; white-space: normal; color: inherit; }
 
 /* Materials column on the hub: one link per item, dot-separated. A lecture with
-   nothing published yet has an empty cell. */
-table.sched.hub td:last-child, table.sched.hub th:last-child { width: 15rem; }
+   nothing published yet has an empty cell. Wide enough for Handout, Exercise and
+   Data on one line; on a wide screen the list never wraps, on a phone it wraps
+   between items only. */
+table.sched.hub td:last-child, table.sched.hub th:last-child { width: 19rem; }
 .mat { margin: 0; padding: 0; list-style: none; font-size: 0.88rem; }
-.mat li { display: inline; }
+.mat li { display: inline; white-space: nowrap; }
+@media (min-width: 720px) {
+	table.sched.hub .mat { white-space: nowrap; }
+}
 .mat li:not(:last-child)::after { content: "·"; color: var(--border); margin: 0 0.4em; }
 
 /* File links carry their type and size so a student knows what they are
