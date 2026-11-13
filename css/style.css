@@ -69,11 +69,11 @@ hr {
 	padding: 0 1.25rem;
 }
 
-/* Prose (plain paragraphs sitting directly in the page, and blog post bodies)
-   stays capped at a comfortable reading measure even though the page frame
-   itself is wider. Only the CV's two-column sections and the projects grid
-   use the full width. */
-main.wrap > p, .profile-body p, .post-body { max-width: 42rem; }
+/* Prose (plain paragraphs sitting directly in the page) stays capped at a
+   comfortable reading measure even though the page frame itself is wider.
+   The CV's two-column sections, the projects grid and blog post bodies use
+   the full width. */
+main.wrap > p, .profile-body p { max-width: 42rem; }
 
 header.site {
 	border-bottom: 1px solid var(--border);

@@ -4,8 +4,16 @@
 	<link href="https://faruk.page/feed.xml" rel="self"/>
 	<link href="https://faruk.page/blog/"/>
 	<id>https://faruk.page/</id>
-	<updated>2026-08-10T00:00:00Z</updated>
+	<updated>2026-11-13T00:00:00Z</updated>
 	<author><name>Faruk Keskin</name></author>
+
+	<entry>
+		<title>Doomsday Was Today</title>
+		<link href="https://faruk.page/blog/doomsday-was-today.html"/>
+		<id>https://faruk.page/blog/doomsday-was-today.html</id>
+		<updated>2026-11-13T00:00:00Z</updated>
+		<summary>In 1960, three engineers dated doomsday to Friday, 13 November 2026. What went wrong, and when the last human would come at today's lowest fertility.</summary>
+	</entry>
 
 	<!-- Add new <entry> blocks above this line (newest first) whenever you publish a post. -->
 </feed>
